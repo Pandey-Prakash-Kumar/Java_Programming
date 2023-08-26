@@ -1,0 +1,12 @@
+1. How to identify a variable is value type variable or nullable type variable?
+Ans : - If the variable is declared using primitive datatype and has not been used any square bracket sign then we can say this is value type variable.
+        Nullable type variable or reference variable: - If the Variable is declared in non primitive style then this will be called Nullable type variable.
+
+2. float x = 3.4; is an error because by default this 3.4 is double literals and double literals can't be assigned in float data type.
+
+3.  35 & 83 ==> 33
+
+4. 47 | 29 ==> 63
+
+5. 76 ^ 108 ==> 32
+

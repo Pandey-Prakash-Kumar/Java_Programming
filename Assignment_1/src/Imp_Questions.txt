@@ -1,0 +1,10 @@
+1. Why main() method is static in java?
+As we know In java program execution starts from main() and this main() method is called by JVM. Now because main() method is static then JVM can call it directly with help of the class name.
+or, So that JVM can call the main() method.
+
+2. Difference between the println vs print of PrintStream Class
+
+3. What is JRE in java?
+Java Runtime Environment is the acronym of JRE. This JRE is software package that includes JVM along with the libraries and other components that require to run the java program
+
+4. What is pascal case, camel case and snake_case
