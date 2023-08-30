@@ -19,10 +19,25 @@ class Person {
 
 }
 class Employee{
-    int empId;
-    String name;
-    double salary;
+    private int empId;
+    private String name;
+    private double salary;
     static int empInstance = 0;
+    static
+    {
+         empInstance+=1;
+
+    }
+    private int generateEmpId(){
+        empId=empInstance++;
+        return empId++;
+
+    }
+
+    public int getEmpId() {
+        return generateEmpId();
+    }
+
     private void setEmpId(int empId){
         this.empId=empId;
     }

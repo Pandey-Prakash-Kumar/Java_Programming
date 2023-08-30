@@ -1,4 +1,5 @@
 package Assignment_16;
+import p1.*;
 
 public class Account {
     private String accountNumber;
@@ -6,6 +7,10 @@ public class Account {
 
     protected double getBalance() {
         return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 
 
