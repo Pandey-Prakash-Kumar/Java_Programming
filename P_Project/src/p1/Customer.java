@@ -1,29 +1,45 @@
 package p1;
 
-import Assignment_16.Account;
-class Customer extends Account{
+import assignment_16.Account;
+class Customer{
+    Account account;
     private String customerName;
 
+    public Customer(String acc, double initialBalance, String name){
+        account=new Account();
+        account.setAccountNumber(acc);
+        account.setBalance(initialBalance);
+        customerName=name;
+
+    }
+
+
     public void deposit(int amt){
-        setBalance(getBalance()+amt);
+        account.setBalance(account.getBalance()+amt);
         System.out.println(amt+" depsoited");
     }
     public void withdraw(int amt){
-        setBalance(getBalance()-amt);
-        System.out.println(amt+" withdrawn");
+        if (account.getBalance()-amt>0) {
+            account.setBalance(account.getBalance() - amt);
+            System.out.println(amt + " withdrawn");
+        }
+        else
+            System.out.println("Insufficient Amount");
     }
-    public double checkBalance(){
-        return getBalance();
+    public void checkBalance(){
+        System.out.println("Name: "+customerName);
+        System.out.println("Account Number: "+account.getAccountNumber());
+        System.out.println("Balance: "+account.getBalance());
     }
 
     public static void main(String[] args) {
-        Customer c1 = new Customer();
-        c1.setBalance(5000);
-        System.out.println(c1.checkBalance());
+        Customer c1 = new Customer("123456789",3000,"Prakash Pandey");
+        c1.account.setBalance(5000);
+        c1.checkBalance();
         c1.deposit(2000);
-        System.out.println(c1.checkBalance());
+        c1.checkBalance();
         c1.withdraw(3500);
-        System.out.println(c1.checkBalance());
+        c1.checkBalance();
 
 
     }
